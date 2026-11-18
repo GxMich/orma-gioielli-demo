@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Orma Gioielli | Gioielli incisi in boutique a Roverasca (demo)</title>
+  <meta name="description" content="Sito dimostrativo per una gioielleria di fantasia: gioielli in acciaio 316L e argento, incisi in boutique con anteprima dal vivo. Nomi, recapiti e prezzi sono inventati.">
+  <meta name="theme-color" content="#FFFFFF">
+  <!-- Attività di fantasia: il sito resta fuori dai motori di ricerca -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orma Gioielli (demo)">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Orma Gioielli | Il tuo segno, da portare addosso">
+  <meta property="og:description" content="Sito dimostrativo per una gioielleria di fantasia, con anteprima dell'incisione in tempo reale.">
+  <meta property="og:url" content="https://gxmich.github.io/orma-gioielli-demo/">
+  <meta property="og:image" content="https://gxmich.github.io/orma-gioielli-demo/assets/media/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23fff' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+  <!-- Font ospitati sul sito: nessuna richiesta a servizi esterni -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="preload" as="image" href="assets/media/hero.webp" imagesrcset="assets/media/hero-sm.webp 1200w, assets/media/hero.webp 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        if (!sessionStorage.getItem("orma-intro") && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) d.classList.add("has-intro");
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Orma Gioielli (attività di fantasia)",
+    "description": "Gioielleria immaginaria creata per un sito dimostrativo: gioielli in acciaio 316L e argento con incisione in boutique.",
+    "url": "https://orma-gioielli.example/",
+    "telephone": "+39 000 000 0000",
+    "email": "info@orma-gioielli.example",
+    "address": { "@type": "PostalAddress", "streetAddress": "Via dei Tigli 14", "addressLocality": "Roverasca", "addressRegion": "Piemonte", "addressCountry": "IT" },
+    "openingHours": "Tu-Sa 09:30-19:30"
+  }
+  </script>
+</head>
+<body>
+  <!-- Intro alla prima visita -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro-mark">
+      <span class="intro-name"><span style="--i:0">O</span><span style="--i:1">R</span><span style="--i:2">M</span><span style="--i:3">A</span></span>
+      <span class="intro-line"></span>
+      <span class="intro-sub">Gioielli</span>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <div class="masthead" id="masthead">
+    <div class="announce" aria-label="Avvisi">
+      <p class="announce-item is-active">Incidiamo in boutique, mentre aspetti</p>
+      <p class="announce-item" aria-hidden="true">Da martedì a sabato, 9:30 – 19:30</p>
+      <p class="announce-item" aria-hidden="true">Per Natale prenota l'incisione</p>
+    </div>
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-overlay">
+          <span class="burger" aria-hidden="true"><i></i><i></i></span>
+          <span class="menu-toggle-label">Menu</span>
+        </button>
+        <nav class="site-nav" aria-label="Principale">
+          <a href="#collezioni">Collezioni</a>
+          <a href="#selezione">Gioielli</a>
+          <a href="#incisioni">Incisione</a>
+          <a href="#regali">Idee regalo</a>
+          <a href="#negozio">Boutique</a>
+        </nav>
+        <a class="brand" href="#top" aria-label="Orma Gioielli, torna all'inizio">
+          <span class="brand-name">Orma</span>
+          <span class="brand-sub">Gioielli</span>
+        </a>
+        <div class="header-tools">
+          <a href="#negozio" class="tool tool-status" data-store-status="short">
+            <span class="status-dot"></span><span class="status-text">Roverasca</span>
+          </a>
+          <button type="button" class="tool tool-icon" aria-label="Instagram (profilo di fantasia)" data-demo="Il profilo Instagram è di fantasia: in un sito reale qui si aprirebbe la pagina della boutique.">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Menu mobile a schermo intero -->
+  <div class="menu-overlay" id="menu-overlay" role="dialog" aria-modal="true" aria-label="Menu" data-lenis-prevent hidden>
+    <div class="menu-top">
+      <button class="menu-close" type="button" aria-label="Chiudi il menu">
+        <span class="burger" aria-hidden="true"><i></i><i></i></span>
+        <span class="menu-toggle-label">Chiudi</span>
+      </button>
+      <span class="brand brand-light" aria-hidden="true">
+        <span class="brand-name">Orma</span>
+        <span class="brand-sub">Gioielli</span>
+      </span>
+    </div>
+    <nav class="menu-nav" aria-label="Sezioni">
+      <a href="#collezioni" style="--i:0"><span>Collezioni</span></a>
+      <a href="#selezione" style="--i:1"><span>Gioielli</span></a>
+      <a href="#incisioni" style="--i:2"><span>Incisione</span></a>
+      <a href="#regali" style="--i:3"><span>Idee regalo</span></a>
+      <a href="#negozio" style="--i:4"><span>Boutique</span></a>
+    </nav>
+    <div class="menu-foot">
+      <p class="status status-light" data-store-status><span class="status-dot"></span><span class="status-text">Da martedì a sabato 9:30–19:30</span></p>
+      <p class="menu-address">Via dei Tigli 14, Roverasca (Piemonte)<br>Da martedì a sabato, 9:30 – 19:30</p>
+      <div class="menu-actions">
+        <a class="btn btn-light" href="#negozio">Come arrivare</a>
+        <a class="link link-light" href="tel:+390000000000">+39 000 000 0000</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <figure class="hero-photo" data-parallax="0.16">
+        <img src="assets/media/hero.webp" srcset="assets/media/hero-sm.webp 1200w, assets/media/hero.webp 2400w" sizes="100vw" width="2400" height="1600" alt="Donna in camicia bianca con collana dorata e orecchini pendenti" fetchpriority="high" decoding="async">
+      </figure>
+      <div class="hero-content">
+        <p class="kicker">Gioielli da incidere, Roverasca</p>
+        <h1 class="hero-title" id="hero-title"><span class="line"><span>Il tuo segno,</span></span> <span class="line"><span>da portare addosso.</span></span></h1>
+        <p class="hero-lead">Acciaio 316L e argento, con un nome, una data o un simbolo scelto da te.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#collezioni">Guarda le collezioni</a>
+          <a class="btn btn-outline-light" href="#incisioni">Prova l'incisione</a>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true"></span>
+    </section>
+
+    <!-- COLLEZIONI -->
+    <section class="section collections" id="collezioni" aria-labelledby="coll-title">
+      <div class="wrap">
+        <h2 class="section-title" id="coll-title" data-split>Le collezioni</h2>
+        <div class="tiles">
+          <a class="tile" href="#selezione" data-tab="tab-natura">
+            <span class="tile-media glint curtain"><img src="assets/media/tile-natura.webp" alt="Collana, anelli e bracciale color oro rosa tra fiori di gypsophila" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <h3>Natura</h3>
+            <p>Conchiglie, perle e forme morbide.</p>
+            <span class="link">Scopri</span>
+          </a>
+          <a class="tile" href="#selezione" data-tab="tab-legami">
+            <span class="tile-media glint curtain"><img src="assets/media/tile-legami.webp" alt="Collana con cuore dorato su raso rosa" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <h3>Legami</h3>
+            <p>Cuori e medagliette su cui incidere un nome.</p>
+            <span class="link">Scopri</span>
+          </a>
+          <a class="tile" href="#selezione" data-tab="tab-quotidiani">
+            <span class="tile-media glint curtain"><img src="assets/media/tile-essenziali.webp" alt="Orecchini a cerchio intrecciati accanto a una conchiglia" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <h3>Ogni giorno</h3>
+            <p>Pezzi semplici da non togliere mai.</p>
+            <span class="link">Scopri</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INCISIONE -->
+    <section class="lab section" id="incisioni" aria-labelledby="lab-title">
+      <div class="wrap">
+        <div class="lab-head">
+          <p class="kicker">Incisione su misura</p>
+          <h2 id="lab-title" data-split>Scrivilo qui, lo incidiamo noi.</h2>
+          <p>Scegli forma, colore e carattere: l'anteprima cambia mentre scrivi. In boutique l'incisione si fa al momento, sotto i tuoi occhi.</p>
+        </div>
+
+        <div class="lab-grid">
+          <div class="lab-stage">
+            <div class="lab-tray">
+              <svg class="tag-svg" id="lab-tag" viewBox="0 0 300 320" role="img" aria-label="Anteprima dell'incisione"></svg>
+            </div>
+            <p class="lab-summary" id="lab-summary" aria-live="polite"></p>
+          </div>
+
+          <form class="lab-controls" id="lab-form" novalidate>
+            <div class="presets" role="group" aria-labelledby="presets-label">
+              <p class="control-label" id="presets-label">Idee pronte</p>
+              <div class="presets-row">
+                <button type="button" class="preset" data-preset='{"shape":"cuore","metal":"rosa","font":"corsivo","line1":"Mamma","line2":"","symbol":"♥"}'>Per la mamma</button>
+                <button type="button" class="preset" data-preset='{"shape":"tondo","metal":"oro","font":"corsivo","line1":"Noi due","line2":"14.09.2021","symbol":"∞"}'>Una data</button>
+                <button type="button" class="preset" data-preset='{"shape":"barretta","metal":"argento","font":"stampatello","line1":"A &amp; L","line2":"","symbol":""}'>Due iniziali</button>
+                <button type="button" class="preset" data-preset='{"shape":"piastrina","metal":"argento","font":"macchina","line1":"sempre","line2":"qui","symbol":"★"}'>Una parola</button>
+                <button type="button" class="preset" data-preset='{"shape":"tondo","metal":"oro","font":"corsivo","line1":"Nina","line2":"21.06.2025","symbol":"★"}'>Un nuovo arrivo</button>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend class="control-label">Forma</legend>
+              <div class="options">
+                <label class="option"><input type="radio" name="shape" value="tondo" checked><span>Tonda</span></label>
+                <label class="option"><input type="radio" name="shape" value="cuore"><span>Cuore</span></label>
+                <label class="option"><input type="radio" name="shape" value="barretta"><span>Barretta</span></label>
+                <label class="option"><input type="radio" name="shape" value="piastrina"><span>Piastrina</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="control-label">Colore</legend>
+              <div class="options">
+                <label class="option"><input type="radio" name="metal" value="argento" checked><span><i class="swatch swatch-argento"></i>Argento</span></label>
+                <label class="option"><input type="radio" name="metal" value="oro"><span><i class="swatch swatch-oro"></i>Oro</span></label>
+                <label class="option"><input type="radio" name="metal" value="rosa"><span><i class="swatch swatch-rosa"></i>Oro rosa</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="control-label" for="line1">Cosa incidiamo</label>
+              <input id="line1" name="line1" type="text" maxlength="14" value="Alice" autocomplete="off" spellcheck="false">
+              <span class="counter" id="line1-count" aria-live="polite">5 di 14 caratteri</span>
+            </div>
+
+            <div class="field">
+              <label class="control-label" for="line2">Seconda riga <span class="optional">facoltativa</span></label>
+              <input id="line2" name="line2" type="text" maxlength="18" placeholder="es. 14.09.2021" autocomplete="off" spellcheck="false">
+            </div>
+
+            <fieldset>
+              <legend class="control-label">Carattere</legend>
+              <div class="options">
+                <label class="option"><input type="radio" name="font" value="corsivo" checked><span class="font-corsivo">Corsivo</span></label>
+                <label class="option"><input type="radio" name="font" value="stampatello"><span class="font-stampatello">Stampatello</span></label>
+                <label class="option"><input type="radio" name="font" value="macchina"><span class="font-macchina">Macchina</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="control-label">Simbolo</legend>
+              <div class="options options-symbols">
+                <label class="option"><input type="radio" name="symbol" value="" checked><span>Nessuno</span></label>
+                <label class="option"><input type="radio" name="symbol" value="♥"><span aria-label="Cuore">♥</span></label>
+                <label class="option"><input type="radio" name="symbol" value="∞"><span aria-label="Infinito">∞</span></label>
+                <label class="option"><input type="radio" name="symbol" value="★"><span aria-label="Stella">★</span></label>
+                <label class="option"><input type="radio" name="symbol" value="✿"><span aria-label="Fiore">✿</span></label>
+              </div>
+            </fieldset>
+
+            <div class="lab-cta">
+              <button class="btn btn-light" type="button" id="send-idea">Invia l'idea</button>
+              <a class="btn btn-outline-light" href="#negozio">Passa in boutique</a>
+              <p class="lab-note" id="send-note">Demo: il riepilogo viene copiato negli appunti, ma non parte nessun messaggio.</p>
+            </div>
+          </form>
+        </div>
+
+        <ol class="steps">
+          <li><strong>Scegli il pezzo</strong><span>Collane, bracciali, medagliette e charms in acciaio 316L.</span></li>
+          <li><strong>Scegli le parole</strong><span>Un nome, una data, una parola sola, un simbolo.</span></li>
+          <li><strong>Esci già con il gioiello</strong><span>L'incisione si fa al banco, in pochi minuti.</span></li>
+        </ol>
+      </div>
+
+      <!-- Anteprima compatta su mobile, visibile mentre si scelgono le opzioni -->
+      <div class="lab-mini" id="lab-mini" aria-hidden="true">
+        <svg class="tag-svg" id="lab-mini-tag" viewBox="0 0 300 320"></svg>
+        <p class="lab-mini-text" id="lab-mini-text"></p>
+        <button type="button" class="lab-mini-btn" tabindex="-1">Anteprima</button>
+      </div>
+    </section>
+
+    <!-- SELEZIONE -->
+    <section class="section selection" id="selezione" aria-labelledby="sel-title">
+      <div class="wrap">
+        <h2 class="section-title" id="sel-title" data-split>In boutique ora</h2>
+
+        <div class="tabs" role="tablist" aria-label="Collezioni">
+          <button role="tab" id="tab-quotidiani" aria-controls="panel-quotidiani" aria-selected="true">Ogni giorno</button>
+          <button role="tab" id="tab-natura" aria-controls="panel-natura" aria-selected="false" tabindex="-1">Natura</button>
+          <button role="tab" id="tab-legami" aria-controls="panel-legami" aria-selected="false" tabindex="-1">Legami</button>
+          <button role="tab" id="tab-stagioni" aria-controls="panel-stagioni" aria-selected="false" tabindex="-1">Stagioni</button>
+        </div>
+
+        <div class="tab-panel" id="panel-quotidiani" role="tabpanel" aria-labelledby="tab-quotidiani">
+          <ul class="products">
+            <li class="product" data-id="catena"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-catena.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Catena a maglia piena</button></h3><p>Acciaio 316L, argento o oro</p></li>
+            <li class="product" data-id="anelli"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-anelli.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Anelli da sovrapporre</button></h3><p>Acciaio 316L, argento o oro</p></li>
+            <li class="product" data-id="rigido"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-rigido.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Bracciale rigido sottile</button></h3><p>Acciaio 316L, argento o oro</p></li>
+            <li class="product" data-id="minicerchi"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-minicerchi.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Cerchietti con pietre</button></h3><p>Acciaio 316L, argento o oro</p></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-natura" role="tabpanel" aria-labelledby="tab-natura" hidden>
+          <ul class="products">
+            <li class="product" data-id="perle"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-perle.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Bracciale di perle</button></h3><p>Collezione Natura</p></li>
+            <li class="product" data-id="orecchini-conchiglia"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-orecchini-conchiglia.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Orecchini di riva</button></h3><p>Collezione Natura</p></li>
+            <li class="product" data-id="charms"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-charms.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Catenine con ciondoli</button></h3><p>Collezione Natura</p></li>
+            <li class="product" data-id="spirale"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-spirale.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Orecchini spirale</button></h3><p>Collezione Natura</p></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-legami" role="tabpanel" aria-labelledby="tab-legami" hidden>
+          <ul class="products">
+            <li class="product" data-id="ovale"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-ovale.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Collana ovale</button></h3><p>Con piastrina da incidere</p><button type="button" class="product-cta" data-preset='{"shape":"piastrina","metal":"oro","font":"corsivo","line1":"Alice","line2":"","symbol":""}'>Prova l'incisione</button></li>
+            <li class="product" data-id="cuore"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-cuore.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Cuore con passanti</button></h3><p>Passanti incisi uno per uno</p><button type="button" class="product-cta" data-preset='{"shape":"cuore","metal":"oro","font":"corsivo","line1":"Sempre","line2":"","symbol":"∞"}'>Prova l'incisione</button></li>
+            <li class="product" data-id="medaglietta"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-medaglietta.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Cerchio con medaglietta</button></h3><p>La medaglietta si incide</p><button type="button" class="product-cta" data-preset='{"shape":"tondo","metal":"oro","font":"corsivo","line1":"A","line2":"","symbol":""}'>Prova l'incisione</button></li>
+            <li class="product" data-id="ciondoli"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-ciondoli.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Bracciale cuori e pietre</button></h3><p>Si aggiunge una medaglietta incisa</p><button type="button" class="product-cta" data-preset='{"shape":"tondo","metal":"argento","font":"macchina","line1":"2026","line2":"","symbol":"★"}'>Prova l'incisione</button></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-stagioni" role="tabpanel" aria-labelledby="tab-stagioni" hidden>
+          <ul class="products">
+            <li class="product" data-id="mare-perle"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-mare-perle.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Bracciale d'estate</button></h3><p>Pezzi contati</p></li>
+            <li class="product" data-id="perle-rosa"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-perle-rosa.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Perle rosa</button></h3><p>Solo in autunno</p></li>
+            <li class="product" data-id="natale"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-natale.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Anelli di Natale</button></h3><p>Con il portagioie inciso</p></li>
+            <li class="product" data-id="intrecciato"><button type="button" class="product-media glint curtain" tabindex="-1" aria-hidden="true"><img src="assets/media/p-intrecciato.webp" alt="" width="800" height="1000" loading="lazy" decoding="async"></button><h3><button type="button" class="product-name">Bracciale intrecciato</button></h3><p>Pezzi contati</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" aria-label="Come lavoriamo">
+      <div class="manifesto-media curtain">
+        <img data-parallax="0.12" src="assets/media/manifesto.webp" alt="Mano con anelli sottili d'argento e pietre colorate, alla luce del tramonto" width="1600" height="1280" loading="lazy" decoding="async">
+      </div>
+      <div class="manifesto-text">
+        <p class="kicker">La boutique</p>
+        <blockquote data-words>Un gioiello si ricorda quando porta addosso una parola tua.</blockquote>
+        <p>Per questo quasi tutto quello che trovi da Orma si può incidere. Scegli con calma, poi l'incisione la facciamo al banco, davanti a te.</p>
+        <a class="link" href="#incisioni">Come funziona l'incisione</a>
+      </div>
+    </section>
+
+    <!-- IDEE REGALO -->
+    <section class="section gifts" id="regali" aria-labelledby="gifts-title">
+      <div class="wrap">
+        <div class="gifts-head">
+          <p class="kicker">Natale 2026</p>
+          <h2 id="gifts-title" data-split>Regali da incidere</h2>
+          <p>Parti da chi lo riceve: c'è già un'idea pronta, tu cambi le parole.</p>
+        </div>
+        <ul class="gift-grid">
+          <li><a class="gift" href="#incisioni" data-preset='{"shape":"cuore","metal":"oro","font":"corsivo","line1":"Alice","line2":"","symbol":""}'>
+            <span class="gift-media glint curtain"><img src="assets/media/g-lei.webp" alt="Collana con cuore dorato e passanti incisi su fondo rosa e azzurro" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <span class="gift-for">Per lei</span>
+            <span class="gift-desc">Il suo nome in corsivo, su un cuore color oro.</span>
+            <span class="link">Crea il regalo</span>
+          </a></li>
+          <li><a class="gift" href="#incisioni" data-preset='{"shape":"cuore","metal":"rosa","font":"corsivo","line1":"Mamma","line2":"","symbol":"♥"}'>
+            <span class="gift-media glint curtain"><img src="assets/media/g-mamma.webp" alt="Ciondolo a cuore dorato in controluce" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <span class="gift-for">Per la mamma</span>
+            <span class="gift-desc">Un cuore oro rosa con una parola sola.</span>
+            <span class="link">Crea il regalo</span>
+          </a></li>
+          <li><a class="gift" href="#incisioni" data-preset='{"shape":"piastrina","metal":"argento","font":"stampatello","line1":"Amiche","line2":"dal 2015","symbol":"∞"}'>
+            <span class="gift-media glint curtain"><img src="assets/media/g-amica.webp" alt="Due polsi con bracciali sottili d'argento su fondo blu" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <span class="gift-for">Per un'amica</span>
+            <span class="gift-desc">Una piastrina con l'anno in cui vi siete conosciute.</span>
+            <span class="link">Crea il regalo</span>
+          </a></li>
+          <li><a class="gift" href="#incisioni" data-preset='{"shape":"tondo","metal":"oro","font":"corsivo","line1":"Nina","line2":"21.06.2025","symbol":"★"}'>
+            <span class="gift-media glint curtain"><img src="assets/media/g-bimbo.webp" alt="Manina di neonato che stringe il dito di un adulto" width="900" height="1200" loading="lazy" decoding="async"></span>
+            <span class="gift-for">Per un nuovo arrivo</span>
+            <span class="gift-desc">Nome e giorno di nascita, da tenere da parte.</span>
+            <span class="link">Crea il regalo</span>
+          </a></li>
+        </ul>
+        <p class="gifts-note">A dicembre la boutique è aperta anche la domenica. <a href="#negozio">Orari</a></p>
+      </div>
+    </section>
+
+    <!-- BOUTIQUE -->
+    <section class="section store" id="negozio" aria-labelledby="store-title">
+      <div class="wrap store-grid">
+        <div class="store-info">
+          <p class="kicker">La boutique</p>
+          <h2 id="store-title" data-split>Roverasca</h2>
+          <p class="store-where">Via dei Tigli 14<br>Roverasca (Piemonte)</p>
+          <p class="status" data-store-status><span class="status-dot"></span><span class="status-text">Da martedì a sabato 9:30–19:30</span></p>
+          <dl class="hours">
+            <div><dt>Martedì – Sabato</dt><dd>9:30 – 19:30</dd></div>
+            <div><dt>Domenica e lunedì</dt><dd>chiuso</dd></div>
+            <div><dt>Dicembre</dt><dd>aperti anche la domenica</dd></div>
+          </dl>
+          <p class="store-how">Telefono <a href="tel:+390000000000">+39 000 000 0000</a> · <a href="mailto:info@orma-gioielli.example">info@orma-gioielli.example</a></p>
+          <div class="store-actions">
+            <button type="button" class="btn" data-demo="Indirizzo di fantasia: in un sito reale qui si aprirebbero le indicazioni stradali.">Ottieni indicazioni</button>
+          </div>
+        </div>
+        <!-- Nessuna mappa esterna: l'indirizzo è inventato -->
+        <div class="map" id="map">
+          <div class="map-placeholder">
+            <svg class="map-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <p class="map-place">Via dei Tigli 14<br>Roverasca</p>
+            <p class="map-note">Qui un sito reale mostrerebbe la mappa, caricata solo su richiesta per non impostare cookie di terze parti. In questa demo l'indirizzo è di fantasia e la mappa è disattivata.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section social" id="instagram" aria-labelledby="ig-title">
+      <div class="wrap">
+        <div class="social-head">
+          <h2 class="section-title" id="ig-title" data-split>@orma.gioielli</h2>
+          <p>Nuovi pezzi e incisioni appena finite. In un sito reale qui comparirebbe il profilo della boutique.</p>
+        </div>
+        <!-- Feed simulato: in produzione si collega al profilo reale (API di Instagram o widget) -->
+        <ul class="ig-grid">
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-1.webp" alt="Post di esempio: collana sottile su camicia bianca" width="600" height="600" loading="lazy" decoding="async"></span></li>
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-2.webp" alt="Post di esempio: mani con grandi anelli dorati" width="600" height="600" loading="lazy" decoding="async"></span></li>
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-3.webp" alt="Post di esempio: bracciale d'argento con perle e conchiglia" width="600" height="600" loading="lazy" decoding="async"></span></li>
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-4.webp" alt="Post di esempio: anelli d'argento e oro sparsi su fondo bianco" width="600" height="600" loading="lazy" decoding="async"></span></li>
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-5.webp" alt="Post di esempio: catene e bracciali dorati" width="600" height="600" loading="lazy" decoding="async"></span></li>
+          <li><span class="ig-tile glint curtain"><img src="assets/media/ig-6.webp" alt="Post di esempio: anelli in una scatolina tra le luci di Natale" width="600" height="600" loading="lazy" decoding="async"></span></li>
+        </ul>
+        <div class="social-cta"><button type="button" class="btn btn-outline" data-demo="Il profilo Instagram è di fantasia: in un sito reale qui si aprirebbe la pagina della boutique.">Seguici su Instagram</button></div>
+      </div>
+    </section>
+
+    <!-- VALORI -->
+    <section class="values" aria-label="Le nostre garanzie">
+      <ul class="wrap values-list">
+        <li><strong>Acciaio 316L anallergico</strong><span>Va bene anche sulla pelle sensibile</span></li>
+        <li><strong>Non scurisce</strong><span>Regge acqua, mare e piscina</span></li>
+        <li><strong>Incisione al banco</strong><span>Pronta in pochi minuti</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Orma</span>
+        <span class="brand-sub">Gioielli</span>
+      </div>
+      <div>
+        <p class="footer-title">Collezioni</p>
+        <p><a href="#selezione" data-tab="tab-natura">Natura</a></p>
+        <p><a href="#selezione" data-tab="tab-legami">Legami</a></p>
+        <p><a href="#selezione" data-tab="tab-quotidiani">Ogni giorno</a></p>
+        <p><a href="#selezione" data-tab="tab-stagioni">Stagioni</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Servizi</p>
+        <p><a href="#incisioni">Incisione su misura</a></p>
+        <p><a href="#regali">Idee regalo</a></p>
+        <p><a href="#negozio">La boutique</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Boutique</p>
+        <p>Via dei Tigli 14<br>Roverasca (Piemonte)</p>
+        <p>Da martedì a sabato 9:30–19:30</p>
+        <p><a href="tel:+390000000000">+39 000 000 0000</a><br><a href="mailto:info@orma-gioielli.example">info@orma-gioielli.example</a></p>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>© 2026 Orma Gioielli</p>
+      <p>Dati aziendali di fantasia</p>
+      <p><a href="privacy.html">Privacy e cookie</a></p>
+    </div>
+    <p class="wrap footer-note">Attività di fantasia: nomi, recapiti, prezzi e recensioni sono inventati. Sito dimostrativo realizzato da <a href="https://www.modicamichele.it">Michele Modica</a>.</p>
+  </footer>
+
+  <!-- Scheda prodotto -->
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+    <div class="drawer-scrim" data-close></div>
+    <div class="drawer-panel" data-lenis-prevent>
+      <button class="drawer-close" type="button" data-close aria-label="Chiudi la scheda">
+        <span class="burger is-x" aria-hidden="true"><i></i><i></i></span>
+      </button>
+      <div class="drawer-media"><img id="drawer-img" src="" alt=""></div>
+      <div class="drawer-body">
+        <p class="kicker" id="drawer-collection"></p>
+        <h2 id="drawer-title"></h2>
+        <p class="drawer-desc" id="drawer-desc"></p>
+        <dl class="drawer-specs" id="drawer-specs"></dl>
+        <div class="drawer-actions" id="drawer-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-bar" id="mobile-bar">
+    <a class="btn" href="#incisioni">Prova l'incisione</a>
+    <a class="btn btn-outline" href="#negozio">Boutique</a>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Schede prodotto: testi e foto in un unico posto, facili da aggiornare -->
+  <script type="application/json" id="products-data">
+  {
+    "catena": { "name": "Catena a maglia piena", "collection": "Ogni giorno", "img": "assets/media/p-catena.webp", "alt": "Catena dorata a maglia piena su fondo nero", "desc": "Una catena che si fa notare da sola, senza bisogno di ciondoli. Non teme l'acqua e non cambia colore.", "finishes": ["Argento", "Oro"] },
+    "anelli": { "name": "Anelli da sovrapporre", "collection": "Ogni giorno", "img": "assets/media/p-anelli.webp", "alt": "Anelli dorati sparsi su un tessuto color sabbia", "desc": "Fasce sottili e piccoli chevalier: se ne mettono due o tre insieme e si cambia combinazione ogni giorno.", "finishes": ["Argento", "Oro"] },
+    "rigido": { "name": "Bracciale rigido sottile", "collection": "Ogni giorno", "img": "assets/media/p-rigido.webp", "alt": "Polso con bracciale rigido dorato annodato", "desc": "Un filo rigido con un nodo al centro. Sta bene con l'orologio e con altri bracciali.", "finishes": ["Argento", "Oro"] },
+    "minicerchi": { "name": "Cerchietti con pietre", "collection": "Ogni giorno", "img": "assets/media/p-minicerchi.webp", "alt": "Piccoli orecchini a cerchio dorati con pietre chiare su raso bianco", "desc": "Cerchi piccoli con una fila di pietre chiare. Così leggeri che si dimenticano addosso.", "finishes": ["Argento", "Oro"] },
+    "perle": { "name": "Bracciale di perle", "collection": "Natura", "img": "assets/media/p-perle.webp", "alt": "Bracciale di perle bianche con due orecchini a perla", "desc": "Perle bianche su filo elastico, con gli orecchini coordinati. Un classico che non passa.", "finishes": ["Argento"] },
+    "orecchini-conchiglia": { "name": "Orecchini di riva", "collection": "Natura", "img": "assets/media/p-orecchini-conchiglia.webp", "alt": "Orecchini dorati appoggiati su conchiglie e madreperla", "desc": "Forme prese da sassi e conchiglie, con la superficie lucida che cattura la luce.", "finishes": ["Oro"] },
+    "charms": { "name": "Catenine con ciondoli", "collection": "Natura", "img": "assets/media/p-charms.webp", "alt": "Tre catenine dorate sottili con piccoli ciondoli su fondo bianco", "desc": "Catenine sottilissime con un ciondolo piccolo: una foglia, un cuore, una stella. Si possono indossare insieme.", "finishes": ["Oro"] },
+    "spirale": { "name": "Orecchini spirale", "collection": "Natura", "img": "assets/media/p-spirale.webp", "alt": "Orecchini dorati a forma di conchiglia a spirale su piatto bianco", "desc": "Due piccole conchiglie a spirale in metallo dorato, pendenti e leggere.", "finishes": ["Oro"] },
+    "ovale": { "name": "Collana ovale", "collection": "Legami", "img": "assets/media/p-ovale.webp", "alt": "Collana dorata con pendente ovale su fondo di sabbia", "desc": "Un ovale sottile su catena morbida. Accanto si aggiunge una piastrina da incidere con un nome o una data.", "finishes": ["Argento", "Oro", "Oro rosa"], "preset": { "shape": "piastrina", "metal": "oro", "font": "corsivo", "line1": "Alice", "line2": "", "symbol": "" } },
+    "cuore": { "name": "Cuore con passanti", "collection": "Legami", "img": "assets/media/p-cuore.webp", "alt": "Pendente a cuore dorato con passanti incisi", "desc": "Un cuore aperto con passanti che scorrono: su ognuno si incide un nome. Si aggiungono col tempo.", "finishes": ["Argento", "Oro", "Oro rosa"], "preset": { "shape": "cuore", "metal": "oro", "font": "corsivo", "line1": "Sempre", "line2": "", "symbol": "∞" } },
+    "medaglietta": { "name": "Cerchio con medaglietta", "collection": "Legami", "img": "assets/media/p-medaglietta.webp", "alt": "Collana dorata con cerchio aperto su fondo nero", "desc": "Un cerchio sospeso tra due catene, con una medaglietta tonda da incidere con un'iniziale.", "finishes": ["Argento", "Oro"], "preset": { "shape": "tondo", "metal": "oro", "font": "corsivo", "line1": "A", "line2": "", "symbol": "" } },
+    "ciondoli": { "name": "Bracciale cuori e pietre", "collection": "Legami", "img": "assets/media/p-ciondoli.webp", "alt": "Bracciale d'argento con piccoli cuori e pietre rosa", "desc": "Cuori traforati e pietre rosa su catena d'argento. A richiesta aggiungiamo una medaglietta incisa.", "finishes": ["Argento"], "preset": { "shape": "tondo", "metal": "argento", "font": "macchina", "line1": "2026", "line2": "", "symbol": "★" } },
+    "mare-perle": { "name": "Bracciale d'estate", "collection": "Stagioni", "img": "assets/media/p-mare-perle.webp", "alt": "Bracciale dorato con perle e ciondoli a conchiglia", "desc": "Maglia grossa con perle, conchiglie e piccoli ciondoli. Ne facciamo pochi, poi la serie finisce.", "finishes": ["Oro"] },
+    "perle-rosa": { "name": "Perle rosa", "collection": "Stagioni", "img": "assets/media/p-perle-rosa.webp", "alt": "Filo di perle rosa e orecchini a perla su marmo", "desc": "Perle rosa per collana e orecchini, disponibili solo nei mesi autunnali.", "finishes": ["Argento"] },
+    "natale": { "name": "Anelli di Natale", "collection": "Stagioni", "img": "assets/media/p-natale.webp", "alt": "Anelli con pietre bianche in un portagioie tra le luci di Natale", "desc": "Anelli con pietra chiara, consegnati in un portagioie con il nome inciso sul coperchio.", "finishes": ["Argento", "Oro"], "custom": "Nome sul portagioie, in boutique" },
+    "intrecciato": { "name": "Bracciale intrecciato", "collection": "Stagioni", "img": "assets/media/p-intrecciato.webp", "alt": "Bracciale di cotone intrecciato multicolore con un elemento dorato", "desc": "Cotone colorato intrecciato a mano con un passante dorato. Allegro, da regalare in coppia.", "finishes": ["Oro"] }
+  }
+  </script>
+
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/app.js?v=13" defer></script>
+  <script src="assets/ui.js?v=13" defer></script>
+  <script src="assets/motion.js?v=13" defer></script>
+</body>
+</html>
